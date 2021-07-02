@@ -79,7 +79,7 @@ class VirtualSitesTracersCommon:
         system.virtual_sites = VirtualSitesInertialessTracers()
 
         # Establish steady state flow field
-        p = system.part.add(pos=(0, 5.5, 5.5), virtual=True)
+        p = system.part.add(pos=(0, 5.5, 5.5), virtual=True, propagation=2)
         system.integrator.run(400)
 
         p.pos = (0, 5.5, 5.5)
